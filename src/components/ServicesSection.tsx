@@ -8,35 +8,35 @@ const services = [
     title: "Pequenas Empresas",
     description:
       " Acelere as vendas com automação inteligente e atendimento imediato pelo WhatsApp.",
-    icon: <Megaphone className="w-5 h-5 text-purple-500" />,
+    icon: <Megaphone className="w-5 h-5 text-[#4bc4f2]" />,
     id: "01",
   },
   {
     title: "Times de Vendas",
     description:
       " Reduza o tempo de resposta, aumente conversões e economize tempo com IA comercial.",
-    icon: <Share2 className="w-5 h-5 text-purple-500" />,
+    icon: <Share2 className="w-5 h-5 text-[#4bc4f2]" />,
     id: "02",
   },
   {
     title: "Startups",
     description:
       " Estruture uma operação de vendas automatizada desde o início — com baixo custo e alta eficiência.",
-    icon: <Users className="w-5 h-5 text-purple-500" />,
+    icon: <Users className="w-5 h-5 text-[#4bc4f2]" />,
     id: "03",
   },
   {
     title: "Agências de Marketing",
     description:
       "Ofereça IA como diferencial para seus clientes e aumente o ROI das campanhas.",
-    icon: <PenTool className="w-5 h-5 text-purple-500" />,
+    icon: <PenTool className="w-5 h-5 text-[#4bc4f2]" />,
     id: "04",
   },
   {
     title: "Especialistas em SEO",
     description:
       "Converta tráfego orgânico automaticamente com assistentes que qualificam e vendem.",
-    icon: <Search className="w-5 h-5 text-purple-500" />,
+    icon: <Search className="w-5 h-5 text-[#4bc4f2]" />,
     id: "05",
   },
   {
@@ -45,7 +45,7 @@ const services = [
       "Podemos adaptar nossa IA para qualquer segmento. Fale com a T3A e vamos automatizar juntos.",
     icon: (
       <div className="w-5 h-5">
-        <svg fill="#a855f7" viewBox="0 0 24 24">
+        <svg fill="#4bc4f2" viewBox="0 0 24 24">
           <path d="M12 2L1.8 9l10.2 7 10.2-7L12 2z" />
         </svg>
       </div>
@@ -65,12 +65,12 @@ export default function ServicesSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="text-sm text-purple-400 uppercase tracking-widest mb-2">
+        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
           Nossos Serviços
         </p>
         <h2 className="text-3xl md:text-4xl font-bold">
           Soluções inteligentes para <br />
-          <span className="italic underline decoration-purple-500">
+          <span className="italic underline decoration-[#4bc4f2]">
             diferentes perfis
           </span>
         </h2>
@@ -81,7 +81,7 @@ export default function ServicesSection() {
           <motion.div
             key={index}
             className={`relative bg-gradient-to-t from-black/20 to-black/5 border border-white/5 rounded-xl p-6 transition ${
-              service.highlight ? "bg-purple-600 text-white" : "bg-[#141414]"
+              service.highlight ? "bg-[#4bc4f2] text-white" : "bg-[#141414]"
             }`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function ServicesSection() {
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
             <div className="flex items-center justify-start gap-4 mb-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-900/30">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white">
                 {service.icon}
               </div>
               <h3 className="text-lg font-semibold">{service.title}</h3>

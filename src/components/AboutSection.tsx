@@ -53,12 +53,12 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-sm text-purple-400 uppercase tracking-widest mb-2">
+          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
             Sobre nós
           </p>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6">
             Construindo liberdade <br />
-            <span className="italic underline decoration-purple-500">
+            <span className="italic underline decoration-[#4bc4f2]">
               com tecnologia.
             </span>{" "}
           </h2>
@@ -68,7 +68,7 @@ export default function AboutSection() {
             com autonomia, eficiência e foco no que realmente importa. Por isso,
             criamos soluções que automatizam o atendimento, captam leads
             qualificados e transformam interações simples em vendas reais
-            <span className="text-purple-400">
+            <span className="text-[#4bc4f2]">
               {" "}
               tudo com o poder da inteligência artificial.
             </span>
@@ -79,12 +79,12 @@ export default function AboutSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold text-white transition">
+            <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition">
               Saiba mais
             </button>
 
             <div className="flex items-center gap-2">
-              <span className="text-3xl font-bold text-purple-400">4.7</span>
+              <span className="text-3xl font-bold text-[#4bc4f2]">4.7</span>
               <div className="flex items-center gap-1 text-yellow-400">
                 {"★★★★★".split("").map((star, i) => (
                   <span key={i} className="text-sm">

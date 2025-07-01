@@ -50,12 +50,12 @@ export default function TestimonialsSection() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="text-sm text-purple-400 uppercase tracking-widest mb-2">
+        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
           Feedbacks
         </p>
         <h2 className="text-3xl md:text-4xl font-bold">
           Feedback de nossos <br />
-          <span className="italic underline decoration-purple-500">
+          <span className="italic underline decoration-[#4bc4f2]">
             clientes
           </span>
         </h2>
@@ -105,9 +105,7 @@ export default function TestimonialsSection() {
             key={idx}
             onClick={() => setCurrent(idx)}
             className={`w-3 h-3 rounded-full border-2 ${
-              idx === current
-                ? "bg-purple-500 border-purple-500"
-                : "border-white"
+              idx === current ? "bg-[#4bc4f2] border-[#4bc4f2]" : "border-white"
             }`}
           />
         ))}

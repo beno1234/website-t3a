@@ -70,7 +70,7 @@ export default function HeroSlider() {
                   transition={{ delay: 0.2, duration: 0.7 }}
                 >
                   {slide.title}{" "}
-                  <span className="italic underline decoration-purple-500">
+                  <span className="italic underline decoration-[#4bc4f2]">
                     {slide.highlight}
                   </span>{" "}
                 </motion.h1>
@@ -90,10 +90,10 @@ export default function HeroSlider() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold text-white transition">
+                  <button className="bg-[#4bc4f2] hover:bg-[#000d24] px-6 py-3 rounded-lg font-semibold text-white transition">
                     Fale com a T3A agora
                   </button>
-                  <button className="w-12 h-12 rounded-full bg-purple-600 hover:bg-purple-700 flex items-center justify-center transition">
+                  <button className="w-12 h-12 rounded-full bg-[#4bc4f2] hover:bg-[#000d24] flex items-center justify-center transition">
                     <Play size={20} />
                   </button>
                 </motion.div>

@@ -21,7 +21,7 @@ const stats = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-[#7c3aed] text-white py-24 max-w-[89rem] mx-auto px-6 md:px-20 rounded-3xl  my-10">
+    <section className="bg-[#1e4b8f] text-white py-24 max-w-[89rem] mx-auto px-6 md:px-20 rounded-3xl  my-10">
       <div className="text-center mb-14">
         <p className="text-sm uppercase tracking-widest text-white/80 mb-2">
           Motivos para

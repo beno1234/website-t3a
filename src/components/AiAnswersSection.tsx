@@ -21,13 +21,13 @@ export default function AiAnswersSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-purple-400 uppercase tracking-widest mb-3">
+          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-3">
             Respostas Inteligentes com IA
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             Total{" "}
-            <span className="italic underline decoration-purple-500">
+            <span className="italic underline decoration-[#4bc4f2]">
               Controle
             </span>{" "}
             de seus <br />
@@ -37,13 +37,13 @@ export default function AiAnswersSection() {
           <ul className="space-y-4 mb-8">
             {items.map((text, index) => (
               <li key={index} className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-purple-500 mt-1" />
+                <Check className="w-5 h-5 text-[#4bc4f2] mt-1" />
                 <span className="text-gray-300">{text}</span>
               </li>
             ))}
           </ul>
 
-          <button className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold text-white transition">
+          <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition">
             Saiba mais
           </button>
         </motion.div>

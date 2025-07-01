@@ -1,6 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import AiAnswersSection from "@/components/AiAnswersSection";
-import FinalCallToAction from "@/components/FinalCallToAction";
+// import FinalCallToAction from "@/components/FinalCallToAction";
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -17,7 +17,7 @@ export default function Home() {
       <WhyChooseUs />
       <AiAnswersSection />
       <TestimonialsSection />
-      <FinalCallToAction />
+      {/* <FinalCallToAction /> */}
     </>
   );
 }
