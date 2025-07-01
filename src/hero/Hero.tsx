@@ -114,7 +114,7 @@ export default function HeroSlider() {
                     height={600}
                     className="rounded-t-[1.5rem] object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-purple-500/30 px-4 py-2 rounded-md text-sm text-right">
+                  <div className="absolute top-4 right-4 bg-[#4bc4f2] px-4 py-2 rounded-md text-sm text-right">
                     <p className="text-white font-bold text-lg">
                       ↑ {slide.efficiency}
                     </p>
@@ -122,13 +122,13 @@ export default function HeroSlider() {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-10 -left-10 z-20 bg-black bg-opacity-70 backdrop-blur-md rounded-lg p-4 border border-purple-500 w-52">
-                  <p className="text-purple-400 font-semibold text-sm mb-1">
+                <div className="absolute -bottom-10 -left-10 z-20 bg-black bg-opacity-70 backdrop-blur-md rounded-lg p-4 border border-[#4bc4f2] w-52">
+                  <p className="text-[#4bc4f2] font-semibold text-sm mb-1">
                     Metas anuais
                   </p>
                   <p className="text-white font-bold text-lg">
                     {slide.goal}{" "}
-                    <span className="text-purple-300 text-xs">
+                    <span className="text-[#4bc4f2] text-xs">
                       {slide.goalGrowth}
                     </span>
                   </p>
