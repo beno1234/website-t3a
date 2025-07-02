@@ -3,14 +3,18 @@
 
 import React from "react";
 import { PhoneOutgoing, Mail, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const cardVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
+  visible: (custom: { custom?: number }) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.2, type: "spring", stiffness: 100 },
+    transition: {
+      delay: (custom?.custom ?? 0) * 0.2,
+      type: "spring",
+      stiffness: 80,
+    },
   }),
 };
 
@@ -30,7 +34,7 @@ const Email: React.FC = () => {
             custom={0}
             initial="hidden"
             animate="visible"
-            variants={cardVariants}
+            variants={itemVariants}
           >
             <div className="bg-gray-700 p-4 rounded-full mb-6">
               <PhoneOutgoing className="w-8 h-8 text-white" />
@@ -48,7 +52,7 @@ const Email: React.FC = () => {
             custom={1}
             initial="hidden"
             animate="visible"
-            variants={cardVariants}
+            variants={itemVariants}
           >
             <div className="bg-[#000d24] p-4 rounded-full mb-6">
               <Mail className="w-8 h-8 text-white" />
@@ -66,7 +70,7 @@ const Email: React.FC = () => {
             custom={2}
             initial="hidden"
             animate="visible"
-            variants={cardVariants}
+            variants={itemVariants}
           >
             <div className="bg-gray-700 p-4 rounded-full mb-6">
               <MapPin className="w-8 h-8 text-white" />
