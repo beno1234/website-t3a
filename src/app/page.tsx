@@ -1,5 +1,6 @@
 import AboutSection from "@/components/AboutSection";
 import AiAnswersSection from "@/components/AiAnswersSection";
+import Footer from "@/components/Footer";
 // import FinalCallToAction from "@/components/FinalCallToAction";
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <AiAnswersSection />
       <TestimonialsSection />
       {/* <FinalCallToAction /> */}
+      <Footer />
     </>
   );
 }

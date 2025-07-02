@@ -26,15 +26,20 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex bg-[#1c1629] rounded-md px-6 py-2 items-center text-sm gap-6">
-          {["Home", "About", "Pages", "Services", "Blog"].map((item) => (
-            <div key={item} className="flex items-center gap-1 cursor-pointer">
-              <span>{item}</span>
-              <ChevronDown size={14} />
-            </div>
+          {[
+            { label: "Home", href: "/" },
+            { label: "Sobre", href: "/sobre" },
+            { label: "Serviços", href: "/servicos" },
+            { label: "Contato", href: "/contato" },
+          ].map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="flex items-center gap-1 cursor-pointer hover:text-purple-400 transition"
+            >
+              {item.label}
+            </Link>
           ))}
-          <Link href="#contact" className="hover:text-purple-400">
-            Contact
-          </Link>
         </nav>
 
         {/* Desktop Right side */}
@@ -64,41 +69,33 @@ export default function Header() {
           </div>
 
           <Link
-            href="#login"
-            className="border bg-[#000d24] px-4 py-2 rounded text-sm hover:bg-[#1e4b8f] transition"
-          >
-            Login
-          </Link>
-
-          <Link
             href="#join"
             className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition"
           >
-            Join now
+            Contato
           </Link>
         </div>
       </div>
-
-      {/* Mobile nav menu */}
       {menuOpen && (
         <div className="flex flex-col mt-4 gap-4 md:hidden">
           <div className="bg-[#1c1629] rounded-md px-4 py-3 text-sm flex flex-col gap-2">
-            {["Home", "About", "Pages", "Services", "Blog"].map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-1 cursor-pointer"
+            {[
+              { label: "Home", href: "/" },
+              { label: "Sobre", href: "/sobre" },
+              { label: "Serviços", href: "/servicos" },
+              { label: "Contato", href: "/contato" },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="flex items-center gap-1 cursor-pointer hover:text-purple-400 transition"
               >
-                <span>{item}</span>
-                <ChevronDown size={14} />
-              </div>
+                {item.label}
+              </Link>
             ))}
-            <Link href="#contact" className="hover:text-purple-400">
-              Contact
-            </Link>
           </div>
 
           <div className="flex justify-between items-center px-2">
-            {/* Language selector */}
             <div className="relative">
               <button
                 onClick={() => setLanguageOpen(!languageOpen)}
@@ -123,19 +120,12 @@ export default function Header() {
               )}
             </div>
 
-            {/* Auth buttons */}
             <div className="flex gap-2">
               <Link
-                href="#login"
-                className="border bg-[#000d24] px-4 py-2 rounded text-sm hover:bg-[#1e4b8f] transition"
-              >
-                Login
-              </Link>
-              <Link
-                href="#join"
+                href="/contato"
                 className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition"
               >
-                Join now
+                Contato
               </Link>
             </div>
           </div>
