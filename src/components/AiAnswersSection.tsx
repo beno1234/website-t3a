@@ -21,11 +21,11 @@ export default function AiAnswersSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-3">
+          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-3 garet">
             Respostas Inteligentes com IA
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight garet">
             Total{" "}
             <span className="italic underline decoration-[#4bc4f2]">
               Controle
@@ -36,14 +36,14 @@ export default function AiAnswersSection() {
 
           <ul className="space-y-4 mb-8">
             {items.map((text, index) => (
-              <li key={index} className="flex items-start gap-3">
+              <li key={index} className="flex items-start gap-3 garet">
                 <Check className="w-5 h-5 text-[#4bc4f2] mt-1" />
                 <span className="text-gray-300">{text}</span>
               </li>
             ))}
           </ul>
 
-          <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition">
+          <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition garet">
             Saiba mais
           </button>
         </motion.div>
@@ -56,7 +56,7 @@ export default function AiAnswersSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="relative w-[600px] h-[600px] mx-auto">
+          <div className="relative md:w-[600px] md:h-[600px] mx-auto">
             <div
               className="absolute inset-0 z-0"
               style={{

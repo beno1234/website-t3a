@@ -81,7 +81,7 @@ const TestimonialCarousel: React.FC = () => {
     >
       <div className="max-w-9xl mx-auto text-center">
         <motion.p
-          className="text-sm uppercase tracking-widest text-gray-400 mb-2"
+          className="text-sm uppercase tracking-widest text-gray-400 mb-2 garet"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -90,13 +90,13 @@ const TestimonialCarousel: React.FC = () => {
         </motion.p>
 
         <motion.h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 leading-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 leading-tight garet"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           Nossos clientes compartilharam <br className="sm:hidden" />
-          <span className="text-[#4bc4f2]">seus sucessos</span>
+          <span className="text-[#4bc4f2] garet">seus sucessos</span>
         </motion.h2>
 
         <Swiper
@@ -124,7 +124,7 @@ const TestimonialCarousel: React.FC = () => {
               >
                 <div>
                   {renderStars(testimonial.rating)}
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  <p className="text-gray-300 text-base leading-relaxed mb-6 garet">
                     {testimonial.text}
                   </p>
                 </div>
@@ -139,10 +139,10 @@ const TestimonialCarousel: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold">
+                    <h4 className="text-lg font-semibold garet">
                       {testimonial.clientName}
                     </h4>
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-400 text-sm garet">
                       {testimonial.clientRole}
                     </p>
                   </div>

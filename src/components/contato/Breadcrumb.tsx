@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Breadcrumb = () => {
   return (
     <section className="relative container mx-auto py-16">
-      <div className="bg-gradient-to-r from-[#000d24] to-[#1e4b8f] max-w-8xl mx-auto py-16 container rounded-xl">
+      <div className="bg-gradient-to-r from-[#000d24] to-[#1e4b8f] max-w-8xl mx-auto py-16 container rounded-xl garet">
         <div className="text-center">
           <motion.h2
             className="text-6xl mt-10"
@@ -24,15 +24,15 @@ const Breadcrumb = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           >
-            <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white">
-              <Link href="/" className="text-white transition">
+            <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white garet">
+              <Link href="/" className="text-white transition garet">
                 Home
-                <span className="ml-10">{">"}</span>
+                <span className="ml-10 garet">{">"}</span>
               </Link>
             </li>
 
-            <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white">
-              <Link href="/contato" className="text-white transition">
+            <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white garet">
+              <Link href="/contato" className="text-white transition garet">
                 Contato
               </Link>
             </li>

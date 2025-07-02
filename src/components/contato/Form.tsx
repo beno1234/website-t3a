@@ -36,14 +36,14 @@ const FormSection: React.FC = () => {
           className="text-center lg:text-left"
           variants={itemVariants}
         >
-          <p className="text-sm uppercase tracking-widest text-[#4bc4f2] mb-2">
+          <p className="text-sm uppercase tracking-widest text-[#4bc4f2] mb-2 garet">
             Contate-nos
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight garet">
             Conecte-se <br className="sm:hidden lg:inline" />
-            <span className="text-[#4bc4f2]">conosco</span>
+            <span className="text-[#4bc4f2 garet]">conosco</span>
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-xl lg:mx-0 mx-auto">
+          <p className="text-gray-400 text-lg mb-8 max-w-xl lg:mx-0 mx-auto garet">
             Conecte-se conosco para descobrir como nossas soluções podem
             transformar seu negócio. Estamos prontos para ajudar você a alcançar
             seus objetivos com tecnologia e inovação.
@@ -96,7 +96,7 @@ const FormSection: React.FC = () => {
           <form className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="sr-only">
+                <label htmlFor="name" className="sr-only garet">
                   Name
                 </label>
                 <input
@@ -108,7 +108,7 @@ const FormSection: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="sr-only">
+                <label htmlFor="email" className="sr-only garet">
                   Email
                 </label>
                 <input
@@ -123,7 +123,7 @@ const FormSection: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="sr-only">
+                <label htmlFor="phone" className="sr-only garet">
                   Phone
                 </label>
                 <input
@@ -135,7 +135,7 @@ const FormSection: React.FC = () => {
                 />
               </div>
               <div>
-                <label htmlFor="service" className="sr-only">
+                <label htmlFor="service" className="sr-only garet">
                   Select service
                 </label>
                 <div className="relative">
@@ -165,7 +165,7 @@ const FormSection: React.FC = () => {
             </div>
 
             <div>
-              <label htmlFor="comment" className="sr-only">
+              <label htmlFor="comment" className="sr-only garet">
                 Escreva sua mensagem aqui
               </label>
               <textarea

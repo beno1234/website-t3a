@@ -50,12 +50,12 @@ export default function TestimonialsSection() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
+        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
           Feedbacks
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold garet">
           Feedback de nossos <br />
-          <span className="italic underline decoration-[#4bc4f2]">
+          <span className="italic underline decoration-[#4bc4f2] garet">
             clientes
           </span>
         </h2>
@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
             <div className="text-yellow-400 mb-4">{"★".repeat(t.rating)} </div>
 
             {/* Text */}
-            <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+            <p className="text-gray-300 text-sm mb-6 leading-relaxed garet">
               {t.content}
             </p>
 
@@ -90,8 +90,8 @@ export default function TestimonialsSection() {
                 className="rounded-full"
               />
               <div>
-                <p className="font-semibold text-white">{t.name}</p>
-                <p className="text-xs text-gray-400">{t.role}</p>
+                <p className="font-semibold text-white garet">{t.name}</p>
+                <p className="text-xs text-gray-400 garet">{t.role}</p>
               </div>
             </div>
           </motion.div>

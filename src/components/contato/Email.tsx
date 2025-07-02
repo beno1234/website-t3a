@@ -39,8 +39,8 @@ const Email: React.FC = () => {
             <div className="bg-gray-700 p-4 rounded-full mb-6">
               <PhoneOutgoing className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Atendimento</h3>
-            <p className="text-gray-400 text-base leading-relaxed">
+            <h3 className="text-2xl font-semibold mb-4 garet">Atendimento</h3>
+            <p className="text-gray-400 text-base leading-relaxed garet">
               +415-864-8728 <br />
               +415-864-8729
             </p>
@@ -57,8 +57,8 @@ const Email: React.FC = () => {
             <div className="bg-[#000d24] p-4 rounded-full mb-6">
               <Mail className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Email</h3>
-            <p className="text-purple-100 text-base leading-relaxed">
+            <h3 className="text-2xl font-semibold mb-4 garet">Email</h3>
+            <p className="text-purple-100 text-base leading-relaxed garet">
               test@teste.com <br />
               test@teste.com
             </p>
@@ -75,8 +75,8 @@ const Email: React.FC = () => {
             <div className="bg-gray-700 p-4 rounded-full mb-6">
               <MapPin className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-semibold mb-4">Localização</h3>
-            <p className="text-gray-400 text-base leading-relaxed">
+            <h3 className="text-2xl font-semibold mb-4 garet">Localização</h3>
+            <p className="text-gray-400 text-base leading-relaxed garet">
               rua tal - Rio de Janeiro - 456, Brasil
             </p>
           </motion.div>

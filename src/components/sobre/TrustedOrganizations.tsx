@@ -40,7 +40,7 @@ const TrustedOrganizationsCarousel: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto text-center">
         <motion.p
-          className="text-sm uppercase tracking-widest text-[#4bc4f2] mb-12"
+          className="text-sm uppercase tracking-widest text-[#4bc4f2] mb-12 garet"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}

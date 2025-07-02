@@ -71,17 +71,19 @@ export default function ServicesSection() {
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
             <div className="flex items-center justify-start gap-4 mb-4">
-              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white garet">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold">{service.title}</h3>
+              <h3 className="text-lg font-semibold garet">{service.title}</h3>
             </div>
 
-            <p className="text-sm text-gray-300 mb-6">{service.description} </p>
+            <p className="text-sm text-gray-300 mb-6 garet">
+              {service.description}{" "}
+            </p>
 
-            <div className="flex items-center justify-between text-xs text-white/30 font-semibold">
+            <div className="flex items-center justify-between text-xs text-white/30 font-semibold garet">
               <span>{service.id}</span>
-              <span className="text-white font-medium flex items-center gap-1">
+              <span className="text-white font-medium flex items-center gap-1 garet">
                 Quero automatizar <span className="text-lg">+</span>
               </span>
             </div>

@@ -25,7 +25,7 @@ export default function Header() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex bg-[#1c1629] rounded-md px-6 py-2 items-center text-sm gap-6">
+        <nav className="hidden md:flex bg-[#1c1629] rounded-md px-6 py-2 items-center text-sm gap-6 garet">
           {[
             { label: "Home", href: "/" },
             { label: "Sobre", href: "/sobre" },
@@ -58,10 +58,10 @@ export default function Header() {
             </button>
             {languageOpen && (
               <div className="absolute right-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10">
-                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
+                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer garet">
                   English
                 </div>
-                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
+                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer garet">
                   Português
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function Header() {
 
           <Link
             href="#join"
-            className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition"
+            className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition garet"
           >
             Contato
           </Link>

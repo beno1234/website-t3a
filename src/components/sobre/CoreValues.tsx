@@ -22,7 +22,7 @@ const CoreValues: React.FC = () => {
     <section className="bg-[#000d24] text-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto text-center">
         <motion.p
-          className="text-sm uppercase tracking-widest text-gray-400 mb-2"
+          className="text-sm uppercase tracking-widest text-gray-400 mb-2 garet"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -31,18 +31,18 @@ const CoreValues: React.FC = () => {
         </motion.p>
 
         <motion.h2
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 leading-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-12 leading-tight garet"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
           Revelando nossos{" "}
-          <span className="text-[#4bc4f2]">valores fundamentais</span>
+          <span className="text-[#4bc4f2] garet">valores fundamentais</span>
           <br />
           para um impacto duradouro.
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 garet">
           {[
             {
               title: "Missão",
@@ -77,11 +77,15 @@ const CoreValues: React.FC = () => {
               animate="visible"
               custom={index}
             >
-              <div className={`${card.iconBg} p-4 rounded-full mb-6`}>
+              <div className={`${card.iconBg} p-4 rounded-full mb-6 garet`}>
                 {card.icon}
               </div>
-              <h3 className="text-2xl font-semibold mb-4">{card.title}</h3>
-              <p className={`${card.textColor} text-base leading-relaxed`}>
+              <h3 className="text-2xl font-semibold mb-4 garet">
+                {card.title}
+              </h3>
+              <p
+                className={`${card.textColor} text-base leading-relaxed garet`}
+              >
                 {card.text}
               </p>
             </motion.div>
@@ -89,7 +93,7 @@ const CoreValues: React.FC = () => {
         </div>
 
         <motion.button
-          className="bg-gray-700 text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-gray-600 transition duration-300"
+          className="bg-gray-700 text-white py-3 px-8 rounded-full text-lg font-medium hover:bg-gray-600 transition duration-300 garet"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 20 }}

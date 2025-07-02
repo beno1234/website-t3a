@@ -23,10 +23,10 @@ export default function WhyChooseUs() {
   return (
     <section className="bg-[#1e4b8f] text-white py-24 max-w-[89rem] mx-auto px-6 md:px-20 rounded-3xl  my-10">
       <div className="text-center mb-14">
-        <p className="text-sm uppercase tracking-widest text-white/80 mb-2">
+        <p className="text-sm uppercase tracking-widest text-white/80 mb-2 garet">
           Motivos para
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold garet">
           Automatizar com <br />
           <span className="italic underline decoration-white">a nossa IA:</span>
         </h2>
@@ -45,10 +45,10 @@ export default function WhyChooseUs() {
             <div className="mb-4">
               <Instagram className="w-8 h-8" />
             </div>
-            <h3 className="text-3xl font-bold mb-2">
+            <h3 className="text-3xl font-bold mb-2 garet">
               <CountUp end={stat.value} duration={2} separator="," suffix="+" />
             </h3>
-            <p className="text-white/80 text-sm">{stat.label}</p>
+            <p className="text-white/80 text-sm garet">{stat.label}</p>
           </motion.div>
         ))}
       </div>

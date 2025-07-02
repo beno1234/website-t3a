@@ -55,7 +55,7 @@ export default function HeroSlider() {
               {/* Left content */}
               <div className="max-w-xl z-10">
                 <motion.div
-                  className="mb-4 inline-block px-4 py-2 rounded-md bg-purple-800/30 text-sm font-medium"
+                  className="mb-4 inline-block px-4 py-2 rounded-md bg-purple-800/30 text-sm font-medium garet"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.6 }}
@@ -64,19 +64,19 @@ export default function HeroSlider() {
                 </motion.div>
 
                 <motion.h1
-                  className="text-4xl md:text-5xl font-extrabold leading-tight mb-6"
+                  className="text-4xl md:text-5xl font-extrabold leading-tight mb-6 garet"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.7 }}
                 >
                   {slide.title}{" "}
-                  <span className="italic underline decoration-[#4bc4f2]">
+                  <span className="italic underline decoration-[#4bc4f2] garet">
                     {slide.highlight}
                   </span>{" "}
                 </motion.h1>
 
                 <motion.p
-                  className="text-gray-300 mb-8"
+                  className="text-gray-300 mb-8 garet"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
@@ -90,7 +90,7 @@ export default function HeroSlider() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
-                  <button className="bg-[#4bc4f2] hover:bg-[#000d24] px-6 py-3 rounded-lg font-semibold text-white transition">
+                  <button className="bg-[#4bc4f2] hover:bg-[#000d24] px-6 py-3 rounded-lg font-semibold text-white transition garet">
                     Fale com a T3A agora
                   </button>
                   <button className="w-12 h-12 rounded-full bg-[#4bc4f2] hover:bg-[#000d24] flex items-center justify-center transition">
@@ -115,18 +115,18 @@ export default function HeroSlider() {
                     className="rounded-t-[1.5rem] object-cover"
                   />
                   <div className="absolute top-4 right-4 bg-[#4bc4f2] px-4 py-2 rounded-md text-sm text-right">
-                    <p className="text-white font-bold text-lg">
+                    <p className="text-white font-bold text-lg garet">
                       ↑ {slide.efficiency}
                     </p>
-                    <p className="text-xs text-purple-200">eficiencia</p>
+                    <p className="text-xs text-purple-200 garet">eficiencia</p>
                   </div>
                 </div>
 
                 <div className="absolute -bottom-10 -left-10 z-20 bg-black bg-opacity-70 backdrop-blur-md rounded-lg p-4 border border-[#4bc4f2] w-52">
-                  <p className="text-[#4bc4f2] font-semibold text-sm mb-1">
+                  <p className="text-[#4bc4f2] font-semibold text-sm mb-1 garet">
                     Metas anuais
                   </p>
-                  <p className="text-white font-bold text-lg">
+                  <p className="text-white font-bold text-lg garet">
                     {slide.goal}{" "}
                     <span className="text-[#4bc4f2] text-xs">
                       {slide.goalGrowth}

@@ -50,13 +50,13 @@ const TeamCarousel: React.FC = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">
+          <p className="text-sm uppercase tracking-widest text-gray-400 mb-2 garet">
             Nosso time
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold mb-6 leading-tight garet">
             Time por trás da <span className="text-[#4bc4f2]">inovação</span>
           </h2>
-          <p className="text-gray-400 text-lg mb-8">
+          <p className="text-gray-400 text-lg mb-8 garet">
             Somos uma equipe dedicada e apaixonada por tecnologia, focada em
             criar soluções inovadoras que fazem a diferença.
           </p>
@@ -110,8 +110,10 @@ const TeamCarousel: React.FC = () => {
                       className="rounded-md"
                     />
                   </div>
-                  <h4 className="text-xl font-semibold mb-1">{member.name}</h4>
-                  <p className="text-gray-400 text-sm">{member.role}</p>
+                  <h4 className="text-xl font-semibold mb-1 garet">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-400 text-sm garet">{member.role}</p>
                 </motion.div>
               </SwiperSlide>
             ))}

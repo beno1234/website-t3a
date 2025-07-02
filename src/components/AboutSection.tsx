@@ -24,7 +24,7 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="relative w-[600px] h-[600px] mx-auto">
+          <div className="relative md:w-[600px] md:h-[600px] mx-auto">
             {/* Background glow (iluminação atrás da imagem) */}
             <div
               className="absolute inset-0 z-0"
@@ -53,17 +53,17 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
+          <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
             Sobre nós
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6 garet">
             Construindo liberdade <br />
             <span className="italic underline decoration-[#4bc4f2]">
               com tecnologia.
             </span>{" "}
           </h2>
 
-          <p className="text-gray-300 mb-4">
+          <p className="text-gray-300 mb-4 garet">
             Na T3A, acreditamos que pequenas e médias empresas merecem crescer
             com autonomia, eficiência e foco no que realmente importa. Por isso,
             criamos soluções que automatizam o atendimento, captam leads
@@ -73,13 +73,13 @@ export default function AboutSection() {
               tudo com o poder da inteligência artificial.
             </span>
           </p>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-6 garet">
             Nosso objetivo é claro: fazer a tecnologia trabalhar por você,
             enquanto sua empresa escala com leveza, agilidade e liberdade.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition">
+            <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition garet">
               Saiba mais
             </button>
 
@@ -92,7 +92,7 @@ export default function AboutSection() {
                   </span>
                 ))}
               </div>
-              <span className="text-sm text-white/70">
+              <span className="text-sm text-white/70 garet">
                 Satisfação de quem já vende com IA.
               </span>
             </div>

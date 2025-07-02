@@ -65,10 +65,10 @@ export default function ServicesSection() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2">
+        <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
           Nossos Serviços
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold garet">
           Soluções inteligentes para <br />
           <span className="italic underline decoration-[#4bc4f2]">
             diferentes perfis
@@ -92,14 +92,16 @@ export default function ServicesSection() {
               <div className="w-10 h-10 rounded-full flex items-center justify-center bg-white">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold">{service.title}</h3>
+              <h3 className="text-lg font-semibold garet">{service.title}</h3>
             </div>
 
-            <p className="text-sm text-gray-300 mb-6">{service.description} </p>
+            <p className="text-sm text-gray-300 mb-6 garet">
+              {service.description}{" "}
+            </p>
 
             <div className="flex items-center justify-between text-xs text-white/30 font-semibold">
-              <span>{service.id}</span>
-              <span className="text-white font-medium flex items-center gap-1">
+              <span className="garet">{service.id}</span>
+              <span className="text-white font-medium flex items-center gap-1 garet">
                 Quero automatizar <span className="text-lg">+</span>
               </span>
             </div>
