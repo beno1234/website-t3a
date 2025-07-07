@@ -3,6 +3,7 @@
 import React from "react";
 import { Lightbulb, Users, Target } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -18,6 +19,14 @@ const cardVariants: Variants = {
 };
 
 const CoreValues: React.FC = () => {
+  const { t } = useTranslation("common");
+  const rawCards = t("coreValues.cards", { returnObjects: true });
+  const cards = Array.isArray(rawCards) ? rawCards : [];
+  const icons = [
+    <Users className="w-8 h-8 text-white" key="icon-missao" />,
+    <Lightbulb className="w-8 h-8 text-white" key="icon-visao" />,
+    <Target className="w-8 h-8 text-white" key="icon-valores" />,
+  ];
   return (
     <section className="bg-[#000d24] text-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto text-center">
@@ -27,7 +36,7 @@ const CoreValues: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Nossos valores
+          {t("coreValues.badge")}
         </motion.p>
 
         <motion.h2
@@ -36,56 +45,37 @@ const CoreValues: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          Revelando nossos{" "}
-          <span className="text-[#4bc4f2] garet">valores fundamentais</span>
+          {t("coreValues.titlePart1")}{" "}
+          <span className="text-[#4bc4f2] garet">
+            {t("coreValues.titleHighlight")}
+          </span>
           <br />
-          para um impacto duradouro.
+          {t("coreValues.titlePart2")}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 garet">
-          {[
-            {
-              title: "Missão",
-              icon: <Users className="w-8 h-8 text-white" />,
-              bg: "bg-gray-800",
-              iconBg: "bg-gray-700",
-              text: "Desenvolver soluções inteligentes e inovadoras que potencializam o crescimento das empresas, tornando a tecnologia acessível e transformadora para desafios reais do mercado.",
-              textColor: "text-gray-400",
-            },
-            {
-              title: "Visão",
-              icon: <Lightbulb className="w-8 h-8 text-white" />,
-              bg: "bg-[#4bc4f2]",
-              iconBg: "bg-[#000d24]",
-              text: "Desenvolver soluções inteligentes e inovadoras que potencializam o crescimento das empresas, tornando a tecnologia acessível e transformadora para desafios reais do mercado.",
-              textColor: "text-purple-100",
-            },
-            {
-              title: "Valores",
-              icon: <Target className="w-8 h-8 text-white" />,
-              bg: "bg-gray-800",
-              iconBg: "bg-gray-700",
-              text: "Na T3A, acreditamos na inovação constante, no compromisso com o sucesso dos clientes e na ética em todas as ações. Valorizamos a colaboração e buscamos desenvolver tecnologias que respeitem o meio ambiente e gerem impacto positivo na sociedade.",
-              textColor: "text-gray-400",
-            },
-          ].map((card, index) => (
+          {cards.map((card, index) => (
             <motion.div
               key={card.title}
-              className={`${card.bg} p-8 rounded-lg flex flex-col items-center text-center`}
+              className={`${
+                index === 1 ? "bg-[#4bc4f2]" : "bg-gray-800"
+              } p-8 rounded-lg flex flex-col items-center text-center`}
               variants={cardVariants}
               initial="hidden"
               animate="visible"
               custom={index}
             >
-              <div className={`${card.iconBg} p-4 rounded-full mb-6 garet`}>
-                {card.icon}
+              <div
+                className={`${
+                  index === 1 ? "bg-[#000d24]" : "bg-gray-700"
+                } p-4 rounded-full mb-6 garet`}
+              >
+                {icons[index]}
               </div>
               <h3 className="text-2xl font-semibold mb-4 garet">
                 {card.title}
               </h3>
-              <p
-                className={`${card.textColor} text-base leading-relaxed garet`}
-              >
+              <p className="text-white text-base leading-relaxed garet">
                 {card.text}
               </p>
             </motion.div>
@@ -100,7 +90,7 @@ const CoreValues: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          Entre em contato
+          {t("coreValues.button")}
         </motion.button>
       </div>
 

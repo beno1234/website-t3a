@@ -1,13 +1,48 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 export default function Header() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const languages = [
+    {
+      code: "en",
+      label: "English",
+      flag: "https://flagcdn.com/w40/us.png",
+    },
+    {
+      code: "pt",
+      label: "Português",
+      flag: "https://flagcdn.com/w40/br.png",
+    },
+  ];
+
+  const currentLanguage = i18n.language || "pt";
+
+  const handleChangeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    setLanguageOpen(false);
+  };
+
+  const { t } = useTranslation("common"); // se estiver usando namespace
+
+  function useHasMounted() {
+    const [hasMounted, setHasMounted] = useState(false);
+    useEffect(() => {
+      setHasMounted(true);
+    }, []);
+    return hasMounted;
+  }
+  const hasMounted = useHasMounted();
+
+  if (!hasMounted) return null;
 
   return (
     <header className="bg-[#000d24] text-white py-4 px-6">
@@ -24,20 +59,19 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex bg-[#1c1629] rounded-md px-6 py-2 items-center text-sm gap-6 garet">
           {[
-            { label: "Home", href: "/" },
-            { label: "Sobre", href: "/sobre" },
-            { label: "Serviços", href: "/servicos" },
-            { label: "Contato", href: "/contato" },
+            { key: "nav.home", href: "/" },
+            { key: "nav.about", href: "/sobre" },
+            { key: "nav.services", href: "/servicos" },
+            { key: "nav.contact", href: "/contato" },
           ].map((item) => (
             <Link
-              key={item.label}
+              key={item.href}
               href={item.href}
               className="flex items-center gap-1 cursor-pointer hover:text-purple-400 transition"
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>
@@ -46,24 +80,42 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-4">
           <div className="relative">
             <button
-              onClick={() => setLanguageOpen(!languageOpen)}
-              className="flex items-center gap-1"
+              onClick={() => setLanguageOpen((prev) => !prev)}
+              className="flex items-center gap-1 focus:outline-none"
+              aria-haspopup="true"
+              aria-expanded={languageOpen}
             >
-              <img
-                src="https://flagcdn.com/w40/us.png"
-                alt="English"
-                className="object-cover w-6 h-4"
+              <Image
+                src={
+                  languages.find((lang) => lang.code === currentLanguage)
+                    ?.flag ?? "https://flagcdn.com/w40/br.png"
+                }
+                alt="Idioma"
+                width={24} // proporção aproximada para 6x4, então 24x16 ou similar
+                height={16}
+                className="object-cover"
               />
               <ChevronDown size={14} />
             </button>
+
             {languageOpen && (
-              <div className="absolute right-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10">
-                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer garet">
-                  English
-                </div>
-                <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer garet">
-                  Português
-                </div>
+              <div className="absolute right-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10 w-32">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => handleChangeLanguage(lang.code)}
+                    className="flex items-center gap-2 w-full px-2 py-1 hover:bg-gray-100 garet"
+                  >
+                    <Image
+                      src={lang.flag}
+                      alt={lang.label}
+                      width={20} // proporcional para w-5 h-3 (5x4 = 20x12)
+                      height={12}
+                      className=""
+                    />
+                    {lang.label}
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -101,10 +153,12 @@ export default function Header() {
                 onClick={() => setLanguageOpen(!languageOpen)}
                 className="flex items-center gap-1"
               >
-                <img
+                <Image
                   src="https://flagcdn.com/w40/us.png"
                   alt="English"
-                  className="object-cover w-6 h-4"
+                  width={24} // proporcional para w-6 h-4 (6x4)
+                  height={16}
+                  className="object-cover"
                 />
                 <ChevronDown size={14} />
               </button>

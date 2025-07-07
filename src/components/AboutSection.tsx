@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+
 // import { CheckCircle } from "lucide-react";
 
 export default function AboutSection() {
+  const { t } = useTranslation("common");
   return (
     <section
       className="bg-[#0e0e0e] py-24 px-6 md:px-20 text-white relative overflow-hidden"
@@ -54,33 +57,24 @@ export default function AboutSection() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
-            Sobre nós
+            {t("about.badge")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6 garet">
-            Construindo liberdade <br />
+            {t("about.title")} <br />
             <span className="italic underline decoration-[#4bc4f2]">
-              com tecnologia.
+              {t("about.highlight")}
             </span>{" "}
           </h2>
 
           <p className="text-gray-300 mb-4 garet">
-            Na T3A, acreditamos que pequenas e médias empresas merecem crescer
-            com autonomia, eficiência e foco no que realmente importa. Por isso,
-            criamos soluções que automatizam o atendimento, captam leads
-            qualificados e transformam interações simples em vendas reais
-            <span className="text-[#4bc4f2]">
-              {" "}
-              tudo com o poder da inteligência artificial.
-            </span>
+            {t("about.p1")}{" "}
+            <span className="text-[#4bc4f2]">{t("about.p1Highlight")}</span>
           </p>
-          <p className="text-gray-300 mb-6 garet">
-            Nosso objetivo é claro: fazer a tecnologia trabalhar por você,
-            enquanto sua empresa escala com leveza, agilidade e liberdade.
-          </p>
+          <p className="text-gray-300 mb-6 garet">{t("about.p2")}</p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition garet">
-              Saiba mais
+              {t("about.cta")}
             </button>
 
             <div className="flex items-center gap-2">
@@ -93,7 +87,7 @@ export default function AboutSection() {
                 ))}
               </div>
               <span className="text-sm text-white/70 garet">
-                Satisfação de quem já vende com IA.
+                {t("about.rating")}
               </span>
             </div>
           </div>

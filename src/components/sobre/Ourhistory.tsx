@@ -4,9 +4,12 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation, Trans } from "react-i18next";
+
 // import { CheckCircle } from "lucide-react";
 
 const Ourhistory = () => {
+  const { t } = useTranslation("common");
   return (
     <section
       className="bg-[#0e0e0e] py-24 px-6 md:px-20 text-white relative overflow-hidden"
@@ -56,32 +59,31 @@ const Ourhistory = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
-            Sobre nós
+            {t("ourhistory.badge")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6 garet">
-            Construindo liberdade <br />
-            com
-            <span className="italic text-[#4bc4f2] garet"> tecnologia.</span>
+            <Trans
+              i18nKey="ourhistory.title"
+              components={[
+                <br key="br" />,
+                <span key="span" className="italic text-[#4bc4f2] garet" />,
+              ]}
+            />
           </h2>
 
           <p className="text-gray-300 mb-4 garet">
-            Na T3A, acreditamos que pequenas e médias empresas merecem crescer
-            com autonomia, eficiência e foco no que realmente importa. Por isso,
-            criamos soluções que automatizam o atendimento, captam leads
-            qualificados e transformam interações simples em vendas reais
+            {t("ourhistory.description1")}{" "}
             <span className="text-[#4bc4f2] garet">
-              {" "}
-              tudo com o poder da inteligência artificial.
+              {t("ourhistory.description1Highlight")}
             </span>
           </p>
           <p className="text-gray-300 mb-6 garet">
-            Nosso objetivo é claro: fazer a tecnologia trabalhar por você,
-            enquanto sua empresa escala com leveza, agilidade e liberdade.
+            {t("ourhistory.description2")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition garet">
-              Saiba mais
+              {t("ourhistory.button")}
             </button>
           </div>
         </motion.div>

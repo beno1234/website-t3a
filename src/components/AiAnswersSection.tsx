@@ -3,14 +3,12 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function AiAnswersSection() {
-  const items = [
-    "Crie uma base de conhecimento personalizada com a identidade do seu negócio.",
-    "Utilize fontes confiáveis para respostas assertivas e estratégicas.",
-    "Esteja sempre um passo à frente com IA que entende e responde com empatia e eficiência.",
-  ];
-
+  const { t } = useTranslation("common");
+  const items = t("ai.items", { returnObjects: true });
+  const itemsArray = Array.isArray(items) ? items : [];
   return (
     <section className="bg-[#0e0e0e] text-white px-6 md:px-20 py-24">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -22,20 +20,23 @@ export default function AiAnswersSection() {
           viewport={{ once: true }}
         >
           <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-3 garet">
-            Respostas Inteligentes com IA
+            {t("ai.badge")}
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight garet">
-            Total{" "}
-            <span className="italic underline decoration-[#4bc4f2]">
-              Controle
-            </span>{" "}
-            de seus <br />
-            clientes, conversas <br /> e atendimentos.
+            <Trans
+              i18nKey="ai.title"
+              components={[
+                <span
+                  key="1"
+                  className="italic underline decoration-[#4bc4f2]"
+                />,
+              ]}
+            />
           </h2>
 
           <ul className="space-y-4 mb-8">
-            {items.map((text, index) => (
+            {itemsArray.map((text: string, index: number) => (
               <li key={index} className="flex items-start gap-3 garet">
                 <Check className="w-5 h-5 text-[#4bc4f2] mt-1" />
                 <span className="text-gray-300">{text}</span>
@@ -44,7 +45,7 @@ export default function AiAnswersSection() {
           </ul>
 
           <button className="bg-[#4bc4f2] hover:bg-[#1e4b8f] px-6 py-3 rounded-lg font-semibold text-white transition garet">
-            Saiba mais
+            {t("ai.cta")}
           </button>
         </motion.div>
 

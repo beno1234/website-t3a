@@ -3,35 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-
-const testimonials = [
-  {
-    name: "Bob E. Wiggins",
-    role: "Social Media Manager",
-    avatar: "/author-4.png",
-    rating: 5,
-    content:
-      "Lorem ipsum amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.",
-  },
-  {
-    name: "Larry K. Lund",
-    role: "Social Media Manager",
-    avatar: "/author-4.png",
-    rating: 5,
-    content:
-      "Lorem ipsum amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.",
-  },
-  {
-    name: "Marian R. Vieira",
-    role: "Social Media Manager",
-    avatar: "/author-4.png",
-    rating: 5,
-    content:
-      "Lorem ipsum amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue.",
-  },
-];
+import { Trans, useTranslation } from "react-i18next";
 
 export default function TestimonialsSection() {
+  const { t } = useTranslation("common");
+  const testimonialsRaw = t("testimonials", { returnObjects: true });
+  const testimonials = Array.isArray(testimonialsRaw) ? testimonialsRaw : [];
+
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -39,7 +17,7 @@ export default function TestimonialsSection() {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [testimonials.length]);
 
   return (
     <section className="bg-[#0e0e0e] text-white px-6 md:px-20 py-24 relative">
@@ -51,13 +29,18 @@ export default function TestimonialsSection() {
         className="text-center mb-16"
       >
         <p className="text-sm text-[#4bc4f2] uppercase tracking-widest mb-2 garet">
-          Feedbacks
+          {t("testimonialsSection.badge")}
         </p>
         <h2 className="text-3xl md:text-4xl font-bold garet">
-          Feedback de nossos <br />
-          <span className="italic underline decoration-[#4bc4f2] garet">
-            clientes
-          </span>
+          <Trans
+            i18nKey="testimonialsSection.title"
+            components={[
+              <span
+                key="1"
+                className="italic underline decoration-[#4bc4f2] garet"
+              />,
+            ]}
+          />
         </h2>
       </motion.div>
 

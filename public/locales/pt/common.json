@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato"
+  },
+
+  "hero": {
+    "badge": "👋 IA que gera vendas no piloto automático",
+    "title": "Automatize suas vendas com",
+    "highlight": "IA",
+    "description": "A T3A ajuda empresas a crescerem com inteligência artificial, captando leads, respondendo em segundos e vendendo 24h por dia — sem depender de humanos.",
+    "cta": "Fale com a T3A agora",
+    "efficiencyLabel": "eficiência",
+    "goalLabel": "Metas anuais"
+  },
+
+  "services": {
+    "sectionTitle": "Nossos Serviços",
+    "sectionSubtitle": "Soluções inteligentes para",
+    "sectionHighlight": "diferentes perfis",
+    "cta": "Quero automatizar",
+    "list": [
+      {
+        "title": "Pequenas Empresas",
+        "description": "Acelere as vendas com automação inteligente e atendimento imediato pelo WhatsApp."
+      },
+      {
+        "title": "Times de Vendas",
+        "description": "Reduza o tempo de resposta, aumente conversões e economize tempo com IA comercial."
+      },
+      {
+        "title": "Startups",
+        "description": "Estruture uma operação de vendas automatizada desde o início — com baixo custo e alta eficiência."
+      },
+      {
+        "title": "Agências de Marketing",
+        "description": "Ofereça IA como diferencial para seus clientes e aumente o ROI das campanhas."
+      },
+      {
+        "title": "Especialistas em SEO",
+        "description": "Converta tráfego orgânico automaticamente com assistentes que qualificam e vendem."
+      },
+      {
+        "title": "Outros negócios",
+        "description": "Podemos adaptar nossa IA para qualquer segmento. Fale com a T3A e vamos automatizar juntos."
+      }
+    ]
+  },
+
+  "about": {
+    "badge": "Sobre nós",
+    "title": "Construindo liberdade",
+    "highlight": "com tecnologia.",
+    "p1": "Na T3A, acreditamos que pequenas e médias empresas merecem crescer com autonomia, eficiência e foco no que realmente importa. Por isso, criamos soluções que automatizam o atendimento, captam leads qualificados e transformam interações simples em vendas reais",
+    "p1Highlight": "tudo com o poder da inteligência artificial.",
+    "p2": "Nosso objetivo é claro: fazer a tecnologia trabalhar por você, enquanto sua empresa escala com leveza, agilidade e liberdade.",
+    "cta": "Saiba mais",
+    "rating": "Satisfação de quem já vende com IA."
+  },
+  "why": {
+    "badge": "Motivos para",
+    "title": "Automatizar com",
+    "highlight": "a nossa IA:",
+    "stats": [
+      "Empresas que transformaram o WhatsApp em uma máquina de vendas.",
+      "Atendimentos realizados com inteligência, empatia e agilidade.",
+      "Conversas automatizadas que viraram reuniões, propostas e vendas."
+    ]
+  },
+  "ai": {
+    "badge": "Respostas Inteligentes com IA",
+    "title": "Total <1>Controle</1> de seus clientes, conversas e atendimentos.",
+    "items": [
+      "Crie uma base de conhecimento personalizada com a identidade do seu negócio.",
+      "Utilize fontes confiáveis para respostas assertivas e estratégicas.",
+      "Esteja sempre um passo à frente com IA que entende e responde com empatia e eficiência."
+    ],
+    "cta": "Saiba mais"
+  },
+  "testimonials": [
+    {
+      "name": "Bob E. Wiggins",
+      "role": "Gerente de Mídias Sociais",
+      "avatar": "/author-4.png",
+      "rating": 5,
+      "content": "A T3A revolucionou nosso atendimento. Automatizamos tudo e os resultados foram impressionantes!"
+    },
+    {
+      "name": "Larry K. Lund",
+      "role": "Especialista em Vendas",
+      "avatar": "/author-4.png",
+      "rating": 5,
+      "content": "Graças à IA da T3A, nosso time ganhou produtividade e aumentamos as conversões."
+    },
+    {
+      "name": "Marian R. Vieira",
+      "role": "CEO de Startup",
+      "avatar": "/author-4.png",
+      "rating": 5,
+      "content": "Simplesmente sensacional. A automação permitiu focar no crescimento sem perder clientes."
+    }
+  ],
+  "testimonialsSection": {
+    "badge": "Feedbacks",
+    "title": "Feedback de nossos <1>clientes</1>"
+  },
+  "breadcrumb": {
+    "title": "Sobre nós",
+    "home": "Home",
+    "services": "Sobre"
+  },
+  "ourhistory": {
+    "badge": "Sobre nós",
+    "title": "Construindo liberdade<br/>com <1>tecnologia.</1>",
+    "description1": "Na T3A, acreditamos que pequenas e médias empresas merecem crescer com autonomia, eficiência e foco no que realmente importa. Por isso, criamos soluções que automatizam o atendimento, captam leads qualificados e transformam interações simples em vendas reais",
+    "description1Highlight": "tudo com o poder da inteligência artificial.",
+    "description2": "Nosso objetivo é claro: fazer a tecnologia trabalhar por você, enquanto sua empresa escala com leveza, agilidade e liberdade.",
+    "button": "Saiba mais"
+  },
+  "coreValues": {
+    "badge": "Nossos valores",
+    "titlePart1": "Revelando nossos",
+    "titleHighlight": "valores fundamentais",
+    "titlePart2": "para um impacto duradouro.",
+    "cards": [
+      {
+        "title": "Missão",
+        "text": "Desenvolver soluções inteligentes e inovadoras que potencializam o crescimento das empresas, tornando a tecnologia acessível e transformadora para desafios reais do mercado."
+      },
+      {
+        "title": "Visão",
+        "text": "Desenvolver soluções inteligentes e inovadoras que potencializam o crescimento das empresas, tornando a tecnologia acessível e transformadora para desafios reais do mercado."
+      },
+      {
+        "title": "Valores",
+        "text": "Na T3A, acreditamos na inovação constante, no compromisso com o sucesso dos clientes e na ética em todas as ações. Valorizamos a colaboração e buscamos desenvolver tecnologias que respeitem o meio ambiente e gerem impacto positivo na sociedade."
+      }
+    ],
+    "button": "Entre em contato"
+  },
+  "team": {
+    "badge": "Nosso time",
+    "title": "Time por trás da <1>inovação</1>",
+    "description": "Somos uma equipe dedicada e apaixonada por tecnologia, focada em criar soluções inovadoras que fazem a diferença.",
+    "members": [
+      {
+        "name": "João Victor Trindade",
+        "role": "Co-Fundador e desenvolvedor da T3A.",
+        "imageUrl": "/joao.webp"
+      },
+      {
+        "name": "Fernando Gusmão",
+        "role": "Co-Fundador e CFO da T3A.",
+        "imageUrl": "/fernando.webp"
+      }
+    ]
+  },
+  "testimonialSection": {
+    "badge": "Histórias de sucesso",
+    "title": "Nossos clientes compartilharam <1>seus sucessos</1>",
+    "list": [
+      {
+        "rating": 5,
+        "text": "O serviço prestado foi excelente, superando todas as minhas expectativas. A equipe é extremamente profissional.",
+        "clientName": "Marian R. Vieira",
+        "clientRole": "Gerente de Mídias Sociais",
+        "clientAvatarUrl": "/author-2.png"
+      },
+      {
+        "rating": 5,
+        "text": "Fiquei impressionado com a agilidade e qualidade do atendimento. Com certeza recomendarei para outras empresas.",
+        "clientName": "Bob E. Wiggins",
+        "clientRole": "Especialista em Marketing Digital",
+        "clientAvatarUrl": "/author-3.png"
+      },
+      {
+        "rating": 5,
+        "text": "A T3A nos ajudou a automatizar processos e aumentar nossa produtividade. Trabalho impecável!",
+        "clientName": "Larry K. Lund",
+        "clientRole": "Coordenador de Projetos",
+        "clientAvatarUrl": "/author-2.png"
+      },
+      {
+        "rating": 5,
+        "text": "Desde o primeiro contato, a equipe foi atenciosa e demonstrou total domínio técnico. Recomendo fortemente.",
+        "clientName": "Isabela F. Moura",
+        "clientRole": "Analista de Sistemas",
+        "clientAvatarUrl": "/author-4.png"
+      },
+      {
+        "rating": 5,
+        "text": "Soluções criativas e eficazes. Nosso projeto foi entregue antes do prazo e com qualidade excepcional.",
+        "clientName": "Carlos A. Pinto",
+        "clientRole": "CTO - TechSoft",
+        "clientAvatarUrl": "/author-5.png"
+      },
+      {
+        "rating": 5,
+        "text": "Excelente comunicação e suporte durante todo o desenvolvimento. Estamos muito satisfeitos com os resultados.",
+        "clientName": "Fernanda L. Castro",
+        "clientRole": "Gerente de Produto",
+        "clientAvatarUrl": "/author-6.png"
+      }
+    ]
+  }
+}

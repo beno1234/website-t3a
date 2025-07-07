@@ -1,38 +1,22 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { motion } from "framer-motion";
+import { useTranslation, Trans } from "react-i18next";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  imageUrl: string;
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    id: 1,
-    name: "João Victor Trindade",
-    role: "Co-Fundador e desenvolvedor da T3A.",
-    imageUrl: "/joao.webp",
-  },
-  {
-    id: 2,
-    name: "Fernando Gusmão",
-    role: "Co-Fundador e CFO da T3A.",
-    imageUrl: "/fernando.webp",
-  },
-];
-
 const TeamCarousel: React.FC = () => {
+  const { t } = useTranslation("common");
+  const rawMembers = t("team.members", { returnObjects: true });
+  const members = Array.isArray(rawMembers) ? rawMembers : [];
+
   return (
     <motion.section
       className="text-white py-16 px-4 sm:px-6 lg:px-8 font-sans"
@@ -51,14 +35,18 @@ const TeamCarousel: React.FC = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm uppercase tracking-widest text-gray-400 mb-2 garet">
-            Nosso time
+            {t("team.badge")}
           </p>
           <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold mb-6 leading-tight garet">
-            Time por trás da <span className="text-[#4bc4f2]">inovação</span>
+            <Trans
+              i18nKey="team.title"
+              components={[
+                <span key="highlight" className="text-[#4bc4f2] garet" />,
+              ]}
+            />
           </h2>
           <p className="text-gray-400 text-lg mb-8 garet">
-            Somos uma equipe dedicada e apaixonada por tecnologia, focada em
-            criar soluções inovadoras que fazem a diferença.
+            {t("team.description")}
           </p>
 
           <div className="flex justify-center md:justify-start space-x-4">
@@ -88,8 +76,8 @@ const TeamCarousel: React.FC = () => {
             }}
             className="mySwiper"
           >
-            {teamMembers.map((member, index) => (
-              <SwiperSlide key={member.id}>
+            {members.map((member, index) => (
+              <SwiperSlide key={index}>
                 <motion.div
                   className="rounded-lg flex flex-col items-center text-center"
                   initial={{ opacity: 0, y: 30 }}

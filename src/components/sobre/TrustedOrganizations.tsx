@@ -78,7 +78,7 @@ const TrustedOrganizationsCarousel: React.FC = () => {
                     <Image
                       src={org.logoUrl}
                       alt={`${org.name} Logo`}
-                      layout="fill"
+                      fill
                       objectFit="contain"
                       className=""
                     />

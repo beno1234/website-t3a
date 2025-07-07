@@ -7,6 +7,22 @@ import Image from "next/image";
 import { Play } from "lucide-react";
 import "swiper/css";
 
+import { useTranslation } from "react-i18next";
+
+/* const heroData = [
+  {
+    title: t("hero.title"),
+    highlight: t("hero.highlight"),
+    description: t("hero.description"),
+    image: "/image-1.png",
+    efficiency: "90%",
+    goal: "R$98.541",
+    goalGrowth: "↑ 110%",
+  },
+  ...
+];
+*/
+
 const heroData = [
   {
     title: "Automatize suas vendas com ",
@@ -31,6 +47,8 @@ const heroData = [
 ];
 
 export default function HeroSlider() {
+  const { t } = useTranslation("common");
+
   return (
     <section
       className="min-h-screen bg-[#000d24] text-white relative overflow-hidden"
@@ -60,7 +78,7 @@ export default function HeroSlider() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1, duration: 0.6 }}
                 >
-                  👋 IA que gera vendas no piloto automático
+                  {t("hero.badge")}
                 </motion.div>
 
                 <motion.h1
@@ -69,9 +87,9 @@ export default function HeroSlider() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2, duration: 0.7 }}
                 >
-                  {slide.title}{" "}
+                  {t("hero.title")}{" "}
                   <span className="italic underline decoration-[#4bc4f2] garet">
-                    {slide.highlight}
+                    {t("hero.highlight")}
                   </span>{" "}
                 </motion.h1>
 
@@ -81,7 +99,7 @@ export default function HeroSlider() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4, duration: 0.6 }}
                 >
-                  {slide.description}
+                  {t("hero.description")}
                 </motion.p>
 
                 <motion.div
@@ -91,7 +109,7 @@ export default function HeroSlider() {
                   transition={{ delay: 0.6, duration: 0.6 }}
                 >
                   <button className="bg-[#4bc4f2] hover:bg-[#000d24] px-6 py-3 rounded-lg font-semibold text-white transition garet">
-                    Fale com a T3A agora
+                    {t("hero.cta")}
                   </button>
                   <button className="w-12 h-12 rounded-full bg-[#4bc4f2] hover:bg-[#000d24] flex items-center justify-center transition">
                     <Play size={20} />
@@ -116,7 +134,7 @@ export default function HeroSlider() {
                   />
                   <div className="absolute top-4 right-4 bg-[#4bc4f2] px-4 py-2 rounded-md text-sm text-right">
                     <p className="text-white font-bold text-lg garet">
-                      ↑ {slide.efficiency}
+                      ↑ {t("hero.efficiencyLabel")}
                     </p>
                     <p className="text-xs text-purple-200 garet">eficiencia</p>
                   </div>
@@ -124,7 +142,7 @@ export default function HeroSlider() {
 
                 <div className="absolute -bottom-10 -left-10 z-20 bg-black bg-opacity-70 backdrop-blur-md rounded-lg p-4 border border-[#4bc4f2] w-52">
                   <p className="text-[#4bc4f2] font-semibold text-sm mb-1 garet">
-                    Metas anuais
+                    {t("hero.goalLabel")}
                   </p>
                   <p className="text-white font-bold text-lg garet">
                     {slide.goal}{" "}
