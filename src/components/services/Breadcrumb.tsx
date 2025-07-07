@@ -3,8 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Breadcrumb = () => {
+  const { t } = useTranslation("common");
+
   return (
     <section className="relative container mx-auto py-16">
       <div className="bg-gradient-to-r from-[#000d24] to-[#1e4b8f] max-w-8xl mx-auto py-16 container rounded-xl garet">
@@ -15,7 +18,7 @@ const Breadcrumb = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Nossos serviços
+            {t("breadcrumbServices.title")}
           </motion.h2>
 
           <motion.ul
@@ -26,14 +29,14 @@ const Breadcrumb = () => {
           >
             <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white garet">
               <Link href="/" className="text-white transition garet">
-                Home
+                {t("breadcrumbServices.home")}
                 <span className="ml-10">{">"}</span>
               </Link>
             </li>
 
             <li className="relative font-normal text-lg mr-4 pr-4 inline-block text-white garet">
               <Link href="/servicos" className="text-white transition garet">
-                Serviços
+                {t("breadcrumbServices.services")}
               </Link>
             </li>
           </motion.ul>

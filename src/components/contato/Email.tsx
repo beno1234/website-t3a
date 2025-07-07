@@ -1,9 +1,10 @@
-// components/CoreValues.tsx
+/* eslint-disable react/jsx-key */
 "use client";
 
 import React from "react";
 import { PhoneOutgoing, Mail, MapPin } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -23,63 +24,47 @@ const buttonVariants = {
   hover: { scale: 1.1 },
 };
 
+const icons = [
+  <PhoneOutgoing className="w-8 h-8 text-white" />,
+  <Mail className="w-8 h-8 text-white" />,
+  <MapPin className="w-8 h-8 text-white" />,
+];
+
 const Email: React.FC = () => {
+  const { t } = useTranslation("common");
+  const cards = t("coreValuesEmail.cards", { returnObjects: true }) as {
+    title: string;
+    content: string;
+  }[];
+
   return (
     <section className="text-white py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {/* People Card */}
-          <motion.div
-            className="bg-gray-800 p-8 rounded-lg flex flex-col items-center text-center"
-            custom={0}
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-          >
-            <div className="bg-gray-700 p-4 rounded-full mb-6">
-              <PhoneOutgoing className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-semibold mb-4 garet">Atendimento</h3>
-            <p className="text-gray-400 text-base leading-relaxed garet">
-              +415-864-8728 <br />
-              +415-864-8729
-            </p>
-          </motion.div>
-
-          {/* Innovation Card */}
-          <motion.div
-            className="bg-[#4bc4f2] p-8 rounded-lg flex flex-col items-center text-center shadow-lg"
-            custom={1}
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-          >
-            <div className="bg-[#000d24] p-4 rounded-full mb-6">
-              <Mail className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-semibold mb-4 garet">Email</h3>
-            <p className="text-purple-100 text-base leading-relaxed garet">
-              test@teste.com <br />
-              test@teste.com
-            </p>
-          </motion.div>
-
-          {/* Mission Card */}
-          <motion.div
-            className="bg-gray-800 p-8 rounded-lg flex flex-col items-center text-center"
-            custom={2}
-            initial="hidden"
-            animate="visible"
-            variants={itemVariants}
-          >
-            <div className="bg-gray-700 p-4 rounded-full mb-6">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-semibold mb-4 garet">Localização</h3>
-            <p className="text-gray-400 text-base leading-relaxed garet">
-              rua tal - Rio de Janeiro - 456, Brasil
-            </p>
-          </motion.div>
+          {cards.map((card, i) => (
+            <motion.div
+              key={i}
+              className={`p-8 rounded-lg flex flex-col items-center text-center ${i === 1 ? "bg-[#4bc4f2] shadow-lg text-purple-100" : "bg-gray-800 text-gray-400"}`}
+              custom={i}
+              initial="hidden"
+              animate="visible"
+              variants={itemVariants}
+            >
+              <div
+                className={`p-4 rounded-full mb-6 ${i === 1 ? "bg-[#000d24]" : "bg-gray-700"}`}
+              >
+                {icons[i]}
+              </div>
+              <h3
+                className={`text-2xl font-semibold mb-4 garet ${i === 1 ? "text-white" : "text-white"}`}
+              >
+                {card.title}
+              </h3>
+              <p className="text-base leading-relaxed whitespace-pre-line garet">
+                {card.content}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
 

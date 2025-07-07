@@ -203,5 +203,83 @@
         "clientAvatarUrl": "/author-6.png"
       }
     ]
+  },
+  "trusted": {
+    "badge": "Brazilian businesses that trust T3A"
+  },
+  "breadcrumbServices": {
+    "title": "About us",
+    "home": "Home",
+    "services": "About"
+  },
+  "heroVideoStats": {
+    "stats": [
+      {
+        "value": "8,000+",
+        "description": "Companies that turned WhatsApp into a sales machine."
+      },
+      {
+        "value": "500,000+",
+        "description": "Interactions handled with intelligence, empathy, and agility."
+      },
+      {
+        "value": "200,000+",
+        "description": "Automated conversations that became meetings, proposals, and sales."
+      }
+    ],
+    "videoTitle": "Amazing American Museum of Natural History in New York / From the Movie...",
+    "ariaLabel": "Play video"
+  },
+  "breadcrumbContact": {
+    "title": "Contact",
+    "home": "Home",
+    "services": "Contact"
+  },
+  "coreValuesEmail": {
+    "cards": [
+      {
+        "title": "Support",
+        "content": "+415-864-8728\n+415-864-8729"
+      },
+      {
+        "title": "Email",
+        "content": "test@teste.com\ntest@teste.com"
+      },
+      {
+        "title": "Location",
+        "content": "Street X - Rio de Janeiro - 456, Brazil"
+      }
+    ]
+  },
+  "form": {
+    "title": "Connect with us",
+    "subtitle": "Connect with us to discover how our solutions can transform your business. We’re ready to help you reach your goals with technology and innovation.",
+    "contact": "Contact us",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "selectService": "Select a service",
+    "placeholderService": "Select service",
+    "services": {
+      "web": "Web Development",
+      "mobile": "Mobile App Development",
+      "ai": "AI Solutions",
+      "consulting": "Consulting"
+    },
+    "message": "Write your message here",
+    "submit": "Send"
+  },
+  "socials": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "youtube": "Youtube",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "rights": "All rights reserved"
   }
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import VideoModal from "../VideoModal";
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface StatItemProps {
   icon: React.ReactNode;
@@ -28,11 +29,16 @@ const StatItem: React.FC<StatItemProps> = ({ icon, value, description }) => (
 
 const HeroWithVideoAndStats: React.FC = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const { t } = useTranslation("common");
+
+  const stats = t("heroVideoStats.stats", { returnObjects: true }) as {
+    value: string;
+    description: string;
+  }[];
 
   const videoId = "Xk4VvQ2kQpU";
-  const youtubeEmbedUrl = `http://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-  const videoTitle =
-    "Amazing American Museum of Natural History in New York / From the Movie...";
+  const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  const videoTitle = t("heroVideoStats.videoTitle");
 
   return (
     <motion.section
@@ -41,7 +47,6 @@ const HeroWithVideoAndStats: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Imagem de Fundo */}
       <div className="relative w-full h-[60vh] md:h-[80vh] lg:h-[90vh]">
         <Image
           src="/video-bg.jpg"
@@ -54,7 +59,6 @@ const HeroWithVideoAndStats: React.FC = () => {
         />
         <div className="absolute inset-0 bg-purple-800 opacity-30 mix-blend-multiply"></div>
 
-        {/* Botão de Play */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center z-10"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -67,17 +71,15 @@ const HeroWithVideoAndStats: React.FC = () => {
             className="relative flex items-center justify-center w-24 h-24 rounded-full bg-white bg-opacity-30 backdrop-blur-sm
               transition-all duration-300 hover:bg-opacity-50 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50
               group"
-            aria-label="Reproduzir vídeo"
+            aria-label={t("heroVideoStats.ariaLabel")}
           >
             <span className="absolute inset-0 rounded-full bg-white opacity-40 animate-ping-slow group-hover:animate-none"></span>
             <span className="absolute inset-0 rounded-full bg-white opacity-20 animate-ping-medium group-hover:animate-none"></span>
-
             <Play className="w-12 h-12 text-[#4bc4f2] fill-current relative z-10 group-hover:scale-110 transition-transform duration-300" />
           </button>
         </motion.div>
       </div>
 
-      {/* Estatísticas */}
       <motion.div
         className="relative -mt-20 md:-mt-32 z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 40 }}
@@ -86,25 +88,17 @@ const HeroWithVideoAndStats: React.FC = () => {
         viewport={{ once: true }}
       >
         <div className="bg-gray-800 p-8 rounded-lg shadow-2xl grid grid-cols-1 md:grid-cols-3 gap-8">
-          <StatItem
-            icon={<Icon />}
-            value="8,000+"
-            description="Empresas que transformaram o WhatsApp em uma máquina de vendas."
-          />
-          <StatItem
-            icon={<Icon />}
-            value="500,000+"
-            description="Atendimentos realizados com inteligência, empatia e agilidade."
-          />
-          <StatItem
-            icon={<Icon />}
-            value="200,000+"
-            description="Conversas automatizadas que viraram reuniões, propostas e vendas."
-          />
+          {stats.map((stat, i) => (
+            <StatItem
+              key={i}
+              icon={<Icon />}
+              value={stat.value}
+              description={stat.description}
+            />
+          ))}
         </div>
       </motion.div>
 
-      {/* Modal de Vídeo */}
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
@@ -115,7 +109,6 @@ const HeroWithVideoAndStats: React.FC = () => {
   );
 };
 
-// Ícone centralizado
 const Icon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

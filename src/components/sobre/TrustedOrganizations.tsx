@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 interface Organization {
   id: number;
@@ -30,6 +31,7 @@ const organizations: Organization[] = [
 ];
 
 const TrustedOrganizationsCarousel: React.FC = () => {
+  const { t } = useTranslation("common");
   return (
     <motion.section
       className="text-white py-16 px-4 sm:px-6 lg:px-8 font-sans"
@@ -45,7 +47,7 @@ const TrustedOrganizationsCarousel: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Negocios brasileiros que confiam na T3A
+          {t("trusted.badge")}
         </motion.p>
 
         <motion.div

@@ -124,7 +124,7 @@ export default function Header() {
             href="#join"
             className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition garet"
           >
-            Contato
+            {t("nav.contact")}
           </Link>
         </div>
       </div>
@@ -179,7 +179,7 @@ export default function Header() {
                 href="/contato"
                 className="bg-[#000d24] px-4 py-2 rounded text-sm font-semibold hover:bg-[#1e4b8f] transition"
               >
-                Contato
+                {t("nav.contact")}
               </Link>
             </div>
           </div>

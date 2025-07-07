@@ -18,7 +18,6 @@ export default function Home() {
       <WhyChooseUs />
       <AiAnswersSection />
       <TestimonialsSection />
-      {/* <FinalCallToAction /> */}
       <Footer />
     </>
   );

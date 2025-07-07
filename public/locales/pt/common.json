@@ -204,5 +204,83 @@
         "clientAvatarUrl": "/author-6.png"
       }
     ]
+  },
+  "trusted": {
+    "badge": "Negocios brasileiros que confiam na T3A"
+  },
+  "breadcrumbServices": {
+    "title": "Sobre nós",
+    "home": "Home",
+    "services": "Sobre"
+  },
+  "heroVideoStats": {
+    "stats": [
+      {
+        "value": "8.000+",
+        "description": "Empresas que transformaram o WhatsApp em uma máquina de vendas."
+      },
+      {
+        "value": "500.000+",
+        "description": "Atendimentos realizados com inteligência, empatia e agilidade."
+      },
+      {
+        "value": "200.000+",
+        "description": "Conversas automatizadas que viraram reuniões, propostas e vendas."
+      }
+    ],
+    "videoTitle": "Museu de História Natural em Nova York / Do filme...",
+    "ariaLabel": "Reproduzir vídeo"
+  },
+  "breadcrumbContact": {
+    "title": "Contato",
+    "home": "Home",
+    "services": "Contato"
+  },
+  "coreValuesEmail": {
+    "cards": [
+      {
+        "title": "Atendimento",
+        "content": "+415-864-8728\n+415-864-8729"
+      },
+      {
+        "title": "Email",
+        "content": "test@teste.com\ntest@teste.com"
+      },
+      {
+        "title": "Localização",
+        "content": "rua tal - Rio de Janeiro - 456, Brasil"
+      }
+    ]
+  },
+  "form": {
+    "title": "Conecte-se conosco",
+    "subtitle": "Conecte-se conosco para descobrir como nossas soluções podem transformar seu negócio. Estamos prontos para ajudar você a alcançar seus objetivos com tecnologia e inovação.",
+    "contact": "Contate-nos",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefone",
+    "selectService": "Selecione um serviço",
+    "placeholderService": "Selecione um serviço",
+    "services": {
+      "web": "Desenvolvimento Web",
+      "mobile": "Desenvolvimento de Aplicativos",
+      "ai": "Soluções em IA",
+      "consulting": "Consultoria"
+    },
+    "message": "Escreva sua mensagem aqui",
+    "submit": "Enviar"
+  },
+  "socials": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "youtube": "Youtube",
+    "instagram": "Instagram"
+  },
+  "footer": {
+    "home": "Home",
+    "about": "Sobre",
+    "services": "Serviços",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados"
   }
 }
