@@ -99,7 +99,7 @@ export default function Header() {
             </button>
 
             {languageOpen && (
-              <div className="absolute right-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10 w-32">
+              <div className="absolute left-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10 w-32">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -109,7 +109,7 @@ export default function Header() {
                     <Image
                       src={lang.flag}
                       alt={lang.label}
-                      width={20} // proporcional para w-5 h-3 (5x4 = 20x12)
+                      width={20}
                       height={12}
                       className=""
                     />
@@ -132,17 +132,17 @@ export default function Header() {
         <div className="flex flex-col mt-4 gap-4 md:hidden">
           <div className="bg-[#1c1629] rounded-md px-4 py-3 text-sm flex flex-col gap-2">
             {[
-              { label: "Home", href: "/" },
-              { label: "Sobre", href: "/sobre" },
-              { label: "Serviços", href: "/servicos" },
-              { label: "Contato", href: "/contato" },
+              { key: "nav.home", href: "/" },
+              { key: "nav.about", href: "/sobre" },
+              { key: "nav.services", href: "/servicos" },
+              { key: "nav.contact", href: "/contato" },
             ].map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className="flex items-center gap-1 cursor-pointer hover:text-purple-400 transition"
               >
-                {item.label}
+                {t(item.key)}
               </Link>
             ))}
           </div>
@@ -154,22 +154,38 @@ export default function Header() {
                 className="flex items-center gap-1"
               >
                 <Image
-                  src="https://flagcdn.com/w40/us.png"
-                  alt="English"
-                  width={24} // proporcional para w-6 h-4 (6x4)
+                  src={
+                    languages.find((lang) => lang.code === currentLanguage)
+                      ?.flag ?? "https://flagcdn.com/w40/br.png"
+                  }
+                  alt={
+                    languages.find((lang) => lang.code === currentLanguage)
+                      ?.label ?? "Português"
+                  }
+                  width={24}
                   height={16}
                   className="object-cover"
                 />
                 <ChevronDown size={14} />
               </button>
               {languageOpen && (
-                <div className="absolute left-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10">
-                  <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
-                    English
-                  </div>
-                  <div className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
-                    Português
-                  </div>
+                <div className="absolute left-0 mt-2 bg-white text-black text-sm rounded shadow p-2 z-10 w-32">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleChangeLanguage(lang.code)}
+                      className="flex items-center gap-2 w-full px-2 py-1 hover:bg-gray-100 garet"
+                    >
+                      <Image
+                        src={lang.flag}
+                        alt={lang.label}
+                        width={20}
+                        height={12}
+                        className=""
+                      />
+                      {lang.label}
+                    </button>
+                  ))}
                 </div>
               )}
             </div>
