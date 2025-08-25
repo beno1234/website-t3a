@@ -80,25 +80,39 @@
 
   "testimonials": [
     {
-      "name": "Bob E. Wiggins",
-      "role": "Social Media Manager",
-      "avatar": "/author-4.png",
+      "name": "Sammy Oliveira",
+      "role": "Founder of LifeUSA",
+      "avatar": "/testimonials/35.jpg",
       "rating": 5,
-      "content": "T3A revolutionized our customer service. We automated everything and the results were amazing!"
+      "content": "With T3A’s solutions, we are saving significant time and money while improving the experience of leads and clients in Life’s funnels."
     },
     {
-      "name": "Larry K. Lund",
-      "role": "Sales Specialist",
-      "avatar": "/author-4.png",
+      "name": "Júlio Cruz",
+      "role": "CFO of SuperFlow",
+      "avatar": "/testimonials/36.jpg",
       "rating": 5,
-      "content": "Thanks to T3A's AI, our team became more productive and we increased our conversion rates."
+      "content": "I recommend Trinity software to fellow entrepreneurs who want to increase their sales team’s efficiency. Your team is to be congratulated for the excellent work and support."
     },
     {
-      "name": "Marian R. Vieira",
-      "role": "Startup CEO",
-      "avatar": "/author-4.png",
+      "name": "Dr. Isabella Hebach",
+      "role": "Dentist and Entrepreneur",
+      "avatar": "/testimonials/37.jpg",
       "rating": 5,
-      "content": "Simply amazing. Automation let us focus on growing without losing clients."
+      "content": "The technology of automated scheduling and instant responses has greatly improved my clinic’s processes. The Trinity software is amazing."
+    },
+    {
+      "name": "Ricardo Gusmão",
+      "role": "Specialist Doctor and Entrepreneur",
+      "avatar": "/testimonials/38.jpg",
+      "rating": 5,
+      "content": "Post-delivery support is a real differentiator. T3A not only delivers but also remains available to ensure everything runs smoothly."
+    },
+    {
+      "name": "Patrick Jordi",
+      "role": "Achieved 7 figures with FiberWeb in 2024 alone",
+      "avatar": "/testimonials/40.jpg",
+      "rating": 5,
+      "content": "Post-delivery support is a real differentiator. T3A not only delivers but also remains available to ensure everything runs smoothly."
     }
   ],
   "testimonialsSection": {
