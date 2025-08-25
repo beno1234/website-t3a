@@ -81,25 +81,39 @@
   },
   "testimonials": [
     {
-      "name": "Bob E. Wiggins",
-      "role": "Gerente de Mídias Sociais",
-      "avatar": "/author-4.png",
+      "name": "Sammy Oliveira",
+      "role": "Fundador da LifeUSA",
+      "avatar": "/testimonials/35.jpg",
       "rating": 5,
-      "content": "A T3A revolucionou nosso atendimento. Automatizamos tudo e os resultados foram impressionantes!"
+      "content": "Com as soluções da T3A, estamos economizando tempo e dinheiro de forma significativa, enquanto melhoramos a experiência dos leads e clientes nos funis da Life"
     },
     {
-      "name": "Larry K. Lund",
-      "role": "Especialista em Vendas",
-      "avatar": "/author-4.png",
+      "name": "Júlio Cruz",
+      "role": "CFO da SuperFlow",
+      "avatar": "/testimonials/36.jpg",
       "rating": 5,
-      "content": "Graças à IA da T3A, nosso time ganhou produtividade e aumentamos as conversões."
+      "content": "Recomendo o software Trinity para os amigos empresários que desejam aumentar a eficiência de seus times comerciais . A equipe de vocês está de parabéns pelo excelente trabalho e suporte"
     },
     {
-      "name": "Marian R. Vieira",
-      "role": "CEO de Startup",
-      "avatar": "/author-4.png",
+      "name": "Dra. Isabella Hebach",
+      "role": "Dentista e empreendedora",
+      "avatar": "/testimonials/37.jpg",
       "rating": 5,
-      "content": "Simplesmente sensacional. A automação permitiu focar no crescimento sem perder clientes."
+      "content": "A tecnologia de agendamentos automáticos e respostas instantâneas mudou para melhor os processos da minha clínica. O software trinity é incrível"
+    },
+    {
+      "name": "Ricardo Gusmão",
+      "role": "Médico Especialista e Empreendedor",
+      "avatar": "/testimonials/38.jpg",
+      "rating": 5,
+      "content": "O suporte pós-entrega é um diferencial. A T3A não apenas entrega, mas continua disponível para garantir que tudo funcione perfeitamente."
+    },
+    {
+      "name": "Patrick Jordi",
+      "role": "Faturou 7D com a FiberWeb só em 2024",
+      "avatar": "/testimonials/40.jpg",
+      "rating": 5,
+      "content": "O suporte pós-entrega é um diferencial. A T3A não apenas entrega, mas continua disponível para garantir que tudo funcione perfeitamente."
     }
   ],
   "testimonialsSection": {
@@ -240,15 +254,15 @@
     "cards": [
       {
         "title": "Atendimento",
-        "content": "+415-864-8728\n+415-864-8729"
+        "content": "+55 11 94832-5815\n+55 21 92013-8121"
       },
       {
         "title": "Email",
-        "content": "test@teste.com\ntest@teste.com"
+        "content": "gestao@t3a.ai"
       },
       {
         "title": "Localização",
-        "content": "rua tal - Rio de Janeiro - 456, Brasil"
+        "content": "Rua Visconde de Piraja, 00414, Sala 718 - Ipanema/RJ"
       }
     ]
   },
