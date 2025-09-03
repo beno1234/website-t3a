@@ -65,6 +65,7 @@ export default function Header() {
             { key: "nav.about", href: "/sobre" },
             { key: "nav.services", href: "/servicos" },
             { key: "nav.contact", href: "/contato" },
+            { key: "nav.policy", href: "/politica-e-privacidade" },
           ].map((item) => (
             <Link
               key={item.href}
@@ -136,6 +137,7 @@ export default function Header() {
               { key: "nav.about", href: "/sobre" },
               { key: "nav.services", href: "/servicos" },
               { key: "nav.contact", href: "/contato" },
+              { key: "nav.policy", href: "/politica-e-privacidade" },
             ].map((item) => (
               <Link
                 key={item.href}
